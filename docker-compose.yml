@@ -28,7 +28,7 @@ services:
     restart: always
     expose:
       - "8000"
-    image: synthesis
+    image: synthesis-api
     volumes:
       - static_volume:/synthesis/app/staticfiles/
     depends_on:
