@@ -39,6 +39,7 @@ services:
     tty: true
     networks:
       - back-end
+      - front-end
     environment:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
