@@ -23,6 +23,9 @@ services:
       - back-end
     expose:
       - "6378"
+    volumes:
+      - redis_data_volume:/data
+      - redis_etc_volume:/etc
 
   api:
     restart: always
@@ -77,3 +80,5 @@ volumes:
   backend_static_volume:
   database_volume:
   static_volume:
+  redis_data_volume:
+  redis_etc_volume:
