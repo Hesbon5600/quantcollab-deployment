@@ -43,4 +43,3 @@ make stop
 Access the frontend from the url `http://localhost`
 
 Access the backend from the url `http://localhost:81`
-# quantcollab-deployment
