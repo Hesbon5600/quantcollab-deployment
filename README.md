@@ -1,14 +1,14 @@
-### HKAD games MVP.
+# Quantcollab Deployment
 
 ---
 
 ---
 
-#### MVP Documentation
+## Documentation
 
 You can change the values in the `.env` file
 
-> > ##### Running the project
+> > ### Running the project
 
 ---
 
@@ -16,26 +16,26 @@ You can change the values in the `.env` file
 
 > > To show usage commands
 
-```
-$ make help
+```bash
+make help
 ```
 
 > > To start the containers verbosely
 
-```
-$ make start-verbose
+```bash
+make start-verbose
 ```
 
 > > To start the containers in the background
 
-```
-$ make start
+```bash
+make start
 ```
 
 > > To stop the app containers
 
-```
-$ make stop
+```bash
+make stop
 ```
 
 ---
@@ -43,3 +43,4 @@ $ make stop
 Access the frontend from the url `http://localhost`
 
 Access the backend from the url `http://localhost:81`
+# quantcollab-deployment
