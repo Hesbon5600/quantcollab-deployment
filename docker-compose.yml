@@ -38,6 +38,7 @@ services:
       - backend_static_volume:/quantcollab-api/app/staticfiles/
     depends_on:
       - database
+      - redis
     entrypoint:
       [
         "/bin/bash",
@@ -58,6 +59,8 @@ services:
       - IEX_TOKEN=${IEX_TOKEN}
       - TRADIER_API_BASE_URL=${TRADIER_API_BASE_URL}
       - TRADIER_API_KEY=${TRADIER_API_KEY}
+      - CELERY_BROKER_URL=redis://redis
+      - CELERY_RESULT_BACKEND=redis://redis
 
   web:
     restart: always
