@@ -7,6 +7,7 @@ help:
 	@echo "---> make start-verbose - To start the containers verbosely"
 	@echo "---> make stop          - To stop the app containers"
 	@echo "---> make redeploy      - To redeploy the app containers"
+	@echo "---> make logs          - To view last 100 logs"
 	@echo "---> make help          - To show usage commands"
 	@echo "----------------------------------------------------------------------------"
 
@@ -23,6 +24,11 @@ start-verbose:
 	@echo "<<<<<<<<<<Start up the app containers after building>>>>>>>>>>>>>>"
 	@echo ""
 	docker-compose up
+#@-- command to view last 100 logs --@#
+logs:
+	@echo "<<<<<<<<<<View last 100 logs>>>>>>>>>>>>>>"
+	@echo ""
+	docker-compose logs --tail=100 -f
 
 
 #@-- command to stop the application --@#
