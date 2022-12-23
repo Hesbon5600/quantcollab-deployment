@@ -7,6 +7,7 @@ help:
 	@echo "---> make start-verbose - To start the containers verbosely"
 	@echo "---> make stop          - To stop the app containers"
 	@echo "---> make redeploy      - To redeploy the app containers"
+	@echo "---> make restart       - To restart the app containers"
 	@echo "---> make logs          - To view last 100 logs"
 	@echo "---> make help          - To show usage commands"
 	@echo "----------------------------------------------------------------------------"
@@ -42,6 +43,12 @@ redeploy:
 	@echo "<<<<<<<<<<Redeploy running the app containers>>>>>>>>>>>>>>"
 	@echo ""
 	sh redeploy.sh
+
+#@-- command to restart the application --@#
+restart:
+	@echo "<<<<<<<<<<Restart running the app containers>>>>>>>>>>>>>>"
+	@echo ""
+	docker-compose restart
 
 #@-- command to stop the application and remove all containers, networks, and volumes --@#
 kill:
